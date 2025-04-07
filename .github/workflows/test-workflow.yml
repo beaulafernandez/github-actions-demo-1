@@ -6,11 +6,11 @@ on:
     - main
 
 jobs:
-  Build Job:
-    runs on: ubuntu-latest
+  Build_Job:
+    runs-on: ubuntu-latest
     steps:
-      name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout_code
+        uses: actions/checkout@v3
         
-      name: Say hello
-      run: echo hello from github!
+      - name: Say hello
+        run: echo hello from github!
