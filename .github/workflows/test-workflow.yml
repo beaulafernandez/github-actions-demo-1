@@ -1,0 +1,14 @@
+name: My first workflow
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  Build Job:
+    runs on: ubuntu-latest
+    steps:
+      name: Say hello
+      run:
+        echo hello from github!
