@@ -1,0 +1,20 @@
+name: Install Java
+
+on:
+    push:
+        branches:
+            -main
+
+jobs:
+    Install_Java:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v3
+
+            - name: Install Java
+              uses: actions/setup-java@v3
+              with:
+                java-version: '17'
+                distribution: 'adoptopenjdk'
+
