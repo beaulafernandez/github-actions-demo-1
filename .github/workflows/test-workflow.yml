@@ -1,7 +1,8 @@
 name: My first workflow
 
 on:
-  create:
+  label:
+    types: [created, deleted]
 
 jobs:
   Test_Job:

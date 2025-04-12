@@ -1,3 +1,5 @@
+PERSONAL STUDY GUIDE
+
 Trigger a Workflow - Events - Activity Type
 
 Examples:
@@ -7,7 +9,6 @@ Examples:
   manual run of workflow
   scheduled : cronjob 
   branch-protection-rule [types created, deleted]
-
 
 Dependent Jobs
 
