@@ -1,4 +1,4 @@
-name: Install Java
+name: Test Workflow
 
 on:
     push:
@@ -6,7 +6,7 @@ on:
             -main
 
 jobs:
-    Install_Java:
+    Test_Job:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repo

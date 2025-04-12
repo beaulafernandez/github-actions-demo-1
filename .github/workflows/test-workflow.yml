@@ -2,15 +2,12 @@ name: My first workflow
 
 on:
   push:
-    branches:
-    - main
 
 jobs:
-  Build_Job:
+  Test_Job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout_code
-        uses: actions/checkout@v3
-        
-      - name: Say hello
-        run: echo hello from github!
+      - name: step-name
+        run: echo 'something'
+
+
