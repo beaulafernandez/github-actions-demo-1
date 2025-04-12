@@ -1,7 +1,7 @@
 name: My first workflow
 
 on:
-  push:
+  create:
 
 jobs:
   Test_Job:
