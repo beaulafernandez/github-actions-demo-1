@@ -4,10 +4,13 @@ on:
   workflow_dispatch: 
 
 jobs:
-  Test_Job:
+  Build_Job:
+    name: Test Job 1
     runs-on: ubuntu-latest
     steps:
-      - name: step-name
-        run: echo 'something'
+      - name: Display variables
+        run:
+          echo "Hello"
+    
 
 
