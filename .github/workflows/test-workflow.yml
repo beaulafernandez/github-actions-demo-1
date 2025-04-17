@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display variables
-        run:
+        run: |
           echo "Hello"
           echo "Testing"${{github.event_name}}
         
