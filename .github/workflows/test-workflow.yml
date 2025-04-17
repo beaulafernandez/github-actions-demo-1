@@ -11,5 +11,5 @@ jobs:
       - name: Display variables
         run: |
           echo "Hello"
-          echo "Testing" ${{github.event_name}}
+          echo "Testing job triggered by " ${{github.event_name}} running on ${{runner.os}}
         
