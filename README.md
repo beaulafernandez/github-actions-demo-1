@@ -13,6 +13,10 @@ Examples:
   workflow_run - based on conclusion of another workflow
   repository_dispatch - events outside github
 
+Jobs | Steps | Runners
+Context - Contexual information
+Environment Varibales | Inputs | Outputs
+
 Dependent Jobs
 
 Condition - if expressions in job
