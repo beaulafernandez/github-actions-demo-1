@@ -11,5 +11,5 @@ jobs:
       - name: Display variables
         run: |
           echo "Hello"
-          echo "Testing"${{github.event_name}}
+          echo "Testing" ${{github.event_name}}
         
