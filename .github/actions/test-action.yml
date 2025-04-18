@@ -1,0 +1,8 @@
+name: Sample action
+description: "This is a test acttion"
+inputs:
+  file-path: 
+    description:
+outputs:
+  results-file:
+    description:
