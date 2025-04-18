@@ -8,8 +8,8 @@ jobs:
     name: Test Job 1
     runs-on: ubuntu-latest
     steps:
-      - name: Display variables
-        run: |
-          echo "Hello"
-          echo "Testing job triggered by " ${{github.event_name}} running on ${{runner.os}}
+      - name: set an enviornment variable
+        run: echo "MY_NAME=Beaula" >> $GITHUB_ENV
+      - name: display the value of an env variable
+        run: echo "The value is $MY_NAME"
         
