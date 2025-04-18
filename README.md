@@ -17,14 +17,14 @@ Jobs | Steps | Runners
   Context - Contexual information
   Dependent Jobs
   Condition - if expressions in job
+  continue-on-error
 
 Matrix Strategy
 
 Environment Varibales | Inputs | Outputs
-  $GITHUB_ENV
-  echo "env_name=value" >> "$GITHUB_ENV"
-  echo "$env_name" 
-
+  $GITHUB_ENV , GITHUB_OUTPUT
+  echo "{name}={value}" >> "$GITHUB_ENV"
+  echo "{name}={value}" >> "$GITHUB_OUTPUT"
 
 Actions 
   Adding an action (Github marketplace, repo - public, repo - same, repo - other)
@@ -35,8 +35,9 @@ Actions
   
   Create an action [ inputs, file-path , outputs, results-file]
 
+GITHUB_TOKEN
 
-
+Secrets
 
 
 

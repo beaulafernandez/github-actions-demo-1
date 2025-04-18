@@ -2,14 +2,34 @@ name: My first workflow
 
 on:
   workflow_dispatch: 
+  
+env:
+  name: development
 
 jobs:
-  Build_Job:
-    name: Test Job 1
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: set an enviornment variable
-        run: echo "MY_NAME=Beaula" >> $GITHUB_ENV
-      - name: display the value of an env variable
-        run: echo "The value is $MY_NAME"
-        
+      - name: step-name
+        run: echo something
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step-name
+        run: echo something
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step-name
+        run: echo something
+  sample:
+    if: ${{always()}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: learn context 
+        id: learn-context
+        run: echo hello $GITHUB_ACTOR >> $GITHUB_OUTPUT
+      - name: testing if expression 
+        if: ${{success()}}
+        run: echo ${{steps.learn-context.outputs}}
+
