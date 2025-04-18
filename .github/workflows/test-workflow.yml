@@ -31,5 +31,5 @@ jobs:
         run: echo "hello $GITHUB_ACTOR" >> "$GITHUB_OUTPUT"
       - name: testing if expression 
         if: ${{success()}}
-        run: echo ${{steps.learn-context.outputs}}
+        run: echo xxx
 
