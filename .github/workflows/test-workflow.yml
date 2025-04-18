@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: learn context 
         id: learn-context
-        run: echo hello $GITHUB_ACTOR >> $GITHUB_OUTPUT
+        run: echo hello $GITHUB_ACTOR >> "$GITHUB_OUTPUT"
       - name: testing if expression 
         if: ${{success()}}
         run: echo ${{steps.learn-context.outputs}}
