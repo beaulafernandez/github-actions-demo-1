@@ -4,7 +4,7 @@ on:
   workflow_dispatch: 
   
 env:
-  name: development
+  catcombo: kunjikanan
 
 jobs:
   build:
@@ -25,11 +25,27 @@ jobs:
   sample:
     if: ${{always()}}
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{steps.learn-context.outputs.mydog}}
+      output2: ${{steps.learn-context.outputs.mycat}}
     steps:
       - name: learn context 
         id: learn-context
-        run: echo "mypet=blacky" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "mydog=blacky" >> "$GITHUB_OUTPUT"
+          echo "mycat=kunji" >> "$GITHUB_OUTPUT"
       - name: testing if expression 
         if: ${{success()}}
-        run: echo this is  ${{steps.learn-context.outputs.mypet}}
+        run: |
+          echo this is ${{steps.learn-context.outputs.mycat}}
+          echo ${{env.catcombo}}
+          echo ${{secrets.GITHUB_TOKEN}}
+  simple:
+    runs-on: ubuntu-latest
+    needs: sample
+    steps:
+      - name: learn job dependancy
+        run: |
+          echo ${{needs.sample.outputs.output1}}
+
 

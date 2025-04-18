@@ -19,6 +19,9 @@ Jobs | Steps | Runners
   Condition - if expressions in job
   continue-on-error
 
+  Passing information between jobs 
+  - map steps output to job output
+
 Matrix Strategy
 
 Environment Varibales | Inputs | Outputs
