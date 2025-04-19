@@ -1,9 +1,7 @@
 name: My first Workflow
 
 on:
-    push:
-        branches:
-            -main
+    push
 
 jobs:
     Test_Job:
