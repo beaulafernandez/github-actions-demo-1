@@ -1,4 +1,5 @@
-name: My first workflow
+name: Pass information bw Jobs
+description: Passing information between Jobs
 
 on:
   workflow_dispatch: 
