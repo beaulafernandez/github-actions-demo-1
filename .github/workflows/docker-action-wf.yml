@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Hello world action step
+      - name: Say hello
         id: hello
-        uses: ./
-        with:
-          who-to-greet: 'Heyleeyy'
+        uses: ./ 
+        with: 
+          who-to-greet: 'MEyyeee'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo ${{steps.hello.outputs.time}}
