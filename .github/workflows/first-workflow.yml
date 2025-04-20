@@ -1,18 +1,11 @@
-name: My first Workflow
+name: Matrix Strategy
 
 on:
-    push
+    workflow_dispatch:
 
 jobs:
-    Test_Job:
+    Build_Job:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repo
+            - name: Run a job using matrix stategy
               uses: actions/checkout@v3
-
-            - name: Install Java
-              uses: actions/setup-java@v3
-              with:
-                java-version: '17'
-                distribution: 'adoptopenjdk'
-

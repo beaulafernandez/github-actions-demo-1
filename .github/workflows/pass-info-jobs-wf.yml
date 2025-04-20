@@ -1,5 +1,5 @@
 name: Pass information bw Jobs
-description: Passing information between Jobs
+description: Passing information between Jobs - map steps output to job output
 
 on:
   workflow_dispatch: 

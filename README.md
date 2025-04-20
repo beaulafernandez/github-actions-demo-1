@@ -16,13 +16,16 @@ Examples:
 Jobs | Steps | Runners
   Context - Contexual information
   Dependent Jobs
+
   Condition - if expressions in job
   continue-on-error
 
   Passing information between jobs 
   - map steps output to job output
 
-Matrix Strategy
+  Matrix Strategy
+  Caching
+  Artifacts
 
 Environment Varibales | Inputs | Outputs
   $GITHUB_ENV , GITHUB_OUTPUT
@@ -35,12 +38,12 @@ Actions
       {owner}/{repo}@{ref}  
       ./path-to-dir 
       docker://{image}:{tag}
-  
+  3
   Create an action [ inputs, file-path , outputs, results-file]
 
-GITHUB_TOKEN
-
 Secrets
+
+
 
 
 
