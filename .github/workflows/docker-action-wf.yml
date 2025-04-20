@@ -1,4 +1,6 @@
-on: [push]
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
   hello_world_job:
@@ -9,9 +11,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Hello world action step
         id: hello
-        uses: ./actions/docker-action
+        uses: ./
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Heyleeyy'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo ${{steps.hello.outputs.time}}
